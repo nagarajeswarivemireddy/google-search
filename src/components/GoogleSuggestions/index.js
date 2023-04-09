@@ -13,7 +13,7 @@ class GoogleSuggestions extends Component {
 
   updateSearchInput = value => {
     const {searchInput} = this.state
-    this.setState((searchInput: value))
+    this.setState({searchInput: value})
   }
 
   onChangeSearchInput = event => {
@@ -56,7 +56,7 @@ class GoogleSuggestions extends Component {
             </div>
             <ul className="suggestions-list">
               {searchResults.map(eachSuggestion => (
-                <suggestionItem
+                <SuggestionItem
                   key={eachSuggestion.id}
                   suggestionDetails={eachSuggestion}
                   updateSearchInput={this.updateSearchInput}

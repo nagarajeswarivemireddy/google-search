@@ -1,9 +1,10 @@
+/* eslint-disable react/no-this-in-sfc */
 /* eslint-disable no-unused-vars */
 // Write your code here
 import './index.css'
 
 const SuggestionItem = props => {
-  const {suggestionDetails, updateSearchInput} = props
+  const {suggestionDetails, updateSearchInput} = this.props
   const {suggestion} = suggestionDetails
 
   const onClickSuggestion = () => {
